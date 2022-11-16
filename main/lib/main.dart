@@ -80,8 +80,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("My 365"),
-        ),
+            automaticallyImplyLeading: false,
+            title: const Center(
+              child: Text('My365'),
+            )),
+        backgroundColor: Colors.blueGrey[200],
         body: SingleChildScrollView(
             child: Stack(children: [
           Container(
@@ -106,7 +109,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   TextField(
                       readOnly: true,
                       decoration: InputDecoration(
-                          border: const OutlineInputBorder(),
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
                           hintText: 'Supporting Image',
                           enabled: true,
                           suffixIcon: IconButton(
@@ -115,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 showDialog<void>(
                                     context: context,
                                     builder: (BuildContext context) {
-                                      //int selectedRadio = 0;
                                       return AlertDialog(
                                         content: StatefulBuilder(
                                           builder: (BuildContext context,
