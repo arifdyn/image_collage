@@ -79,9 +79,9 @@ class GridCollageWidget extends StatelessWidget {
                 : const Padding(
                     padding: EdgeInsets.all(3),
                     child: Material(
-                      child: Icon(Icons.add),
                       borderRadius: BorderRadius.all(Radius.circular(5)),
                       color: Color(0xFFD3D3D3),
+                      child: Icon(Icons.camera_alt_outlined),
                     ),
                   ),
           ),
